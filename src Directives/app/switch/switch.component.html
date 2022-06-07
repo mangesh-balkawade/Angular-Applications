@@ -1,0 +1,26 @@
+<h1>
+    Marvellous Portal BY Switch
+</h1>
+
+<div [ngSwitch]="batch">
+    <div *ngSwitchCase="'ppa'">
+        you are selecting ppa batch
+    </div>
+
+    <div *ngSwitchCase="'lb'">
+        you are selecting lb batch
+    </div>
+
+    <div *ngSwitchCase="'angular'">
+        you are selecting angular batch
+    </div>
+
+    <div *ngSwitchCase="'python'">
+        you are selecting python batch
+    </div>
+
+    <div *ngSwitchDefault>
+        There is no such batch
+    </div>
+
+</div>

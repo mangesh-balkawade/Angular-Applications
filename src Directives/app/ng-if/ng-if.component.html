@@ -1,0 +1,19 @@
+<h1 *ngIf="flag">Inside Ng If</h1>
+
+<ng-template #VegFood>
+    <h1>
+        Please consider veg food
+    </h1>
+</ng-template>
+
+<ng-template #NonvegFood>
+    <h1>
+        Please conside non veg food
+    </h1>
+</ng-template>
+
+<h1 *ngIf="food;then VegFood;else NonvegFood">
+</h1>
+
+
+

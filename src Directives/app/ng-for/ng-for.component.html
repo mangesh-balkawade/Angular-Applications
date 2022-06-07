@@ -1,0 +1,18 @@
+<h1 [style.color]="'green'"> Bathes Of Marvellous</h1>
+<h1>{{batchesArr[0]}}</h1>
+<h1>{{batchesArr[1]}}</h1>
+<h1>{{batchesArr[2]}}</h1>
+<h1>{{batchesArr[3]}}</h1>
+<h1>{{batchesArr[4]}}</h1>
+
+<h1 [style.color]="'red'">Through NgFor</h1>
+<div  *ngFor="let i of batchesArr">
+<h2>{{i}}</h2>
+</div>
+
+<h1 [style.color]="'red'">Through NgFor with index</h1>
+<div *ngFor="let i of batchesArr;index as j">
+<h2 >{{i}}:{{j}}</h2>
+</div>
+
+
