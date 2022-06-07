@@ -1,0 +1,55 @@
+<h1>Hotel Menu</h1>
+<label for="type">Please Select type of menu</label><br>
+<label for="veg">Veg</label>
+<input id="veg"  type="radio"   name="food" (ngModelChange)="displayMenu('veg')">
+<label for="nonveg">NonVeg</label>
+<input id="nonveg"  type="radio" name="food" (ngModelChange)="displayMenu('nonveg')"><br>
+
+<ng-template #vegi>
+<div >
+  <table>
+      <thead>
+          <tr>
+              <td>Sr.no </td>
+          </tr>
+          <tr>
+              <td >Items Menu</td>
+          </tr>
+      </thead>
+      <tbody *ngFor="let items of veg;index as i">
+          <tr>
+              <td>{{items}}</td>
+          </tr>
+          <tr>
+              <td>{{i}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+</ng-template>
+<ng-template #nonvegi>
+    <div >
+      <table border="2">
+          <thead>
+              <th>
+                  Sr.no 
+              </th>
+              <th>
+                  Items Menu
+              </th>
+          </thead>
+          <tbody *ngFor="let items of nonveg;index as i">
+              <tr>
+                  <td>{{i}}</td>
+                  <td>{{items}}</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    </ng-template>
+    <div *ngIf="flag=='veg';then vegi;else nonvegi">
+
+
+
+
+
